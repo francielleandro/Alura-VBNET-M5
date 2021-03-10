@@ -128,5 +128,11 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ByteBank.Bibliotecas\ByteBank.Bibliotecas.vbproj">
+      <Project>{11A29294-3F2D-4D55-B8EA-81C022C5B5B3}</Project>
+      <Name>ByteBank.Bibliotecas</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
