@@ -9,6 +9,7 @@ Namespace Classes.Funcionarios
 
 #Region "PROPRIEDADES"
         Public Property senha As String
+        Private AutenticacaoHelper As New AutenticacaoHelper()
 
 #End Region
 
@@ -23,11 +24,7 @@ Namespace Classes.Funcionarios
 #Region "MÉTODOS"
 
         Public Function Autenticar(senhaTentativa As String) As Boolean Implements IAutenticavel.Autenticar
-            If senha = senhaTentativa Then
-                Return True
-            End If
-            Return False
-
+            Return AutenticacaoHelper.Autenticar(senhaTentativa, senha)
         End Function
 
 #End Region
