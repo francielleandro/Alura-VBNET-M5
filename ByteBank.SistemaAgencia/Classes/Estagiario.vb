@@ -1,6 +1,6 @@
-﻿Namespace Classes.Funcionarios
-
-    Public Class Auxiliar
+﻿Imports ByteBank.Bibliotecas.Classes.Funcionarios
+Namespace Classes
+    Public Class Estagiario
         Inherits Funcionario
 
 #Region "PROPRIEDADES"
@@ -19,7 +19,7 @@
 
         'Overrides = Substitui
 
-        Protected Friend Overrides Function GetBonificacao() As Double
+        Protected Overrides Function GetBonificacao() As Double
 
             Return (salario * 0.2)
 
@@ -35,8 +35,4 @@
 
 
     End Class
-
 End Namespace
-
-
-

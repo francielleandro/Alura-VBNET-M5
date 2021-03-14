@@ -19,13 +19,13 @@
 
         'Overrides = Substitui
 
-        Friend Overrides Function GetBonificacao() As Double
+        Protected Friend Overrides Function GetBonificacao() As Double
 
             Return (salario * 0.17)
 
         End Function
 
-        Friend Overrides Sub AumentarSalario()
+        Public Overrides Sub AumentarSalario()
 
             salario = salario * 1.11
 

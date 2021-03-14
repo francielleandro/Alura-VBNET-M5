@@ -16,13 +16,13 @@
 #End Region
 
 #Region "MÉTODOS"
-        Friend Overrides Function GetBonificacao() As Double
+        Protected Friend Overrides Function GetBonificacao() As Double
 
             Return salario * 0.25
 
         End Function
 
-        Friend Overrides Sub AumentarSalario()
+        Public Overrides Sub AumentarSalario()
 
             salario = salario * 1.05
 
