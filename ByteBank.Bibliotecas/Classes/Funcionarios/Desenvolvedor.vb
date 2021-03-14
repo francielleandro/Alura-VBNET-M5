@@ -19,13 +19,13 @@ Namespace Classes.Funcionarios
 
         'Overrides = Substitui
 
-        Public Overrides Function GetBonificacao() As Double
+        Friend Overrides Function GetBonificacao() As Double
 
             Return (salario * 0.1)
 
         End Function
 
-        Public Overrides Sub AumentarSalario()
+        Friend Overrides Sub AumentarSalario()
 
             salario = salario * 0.15
 

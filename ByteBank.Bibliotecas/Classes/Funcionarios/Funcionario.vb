@@ -48,9 +48,9 @@ Namespace Classes.Funcionarios
 
         'Overridable = substituivel !!!!!!
 
-        Public MustOverride Function GetBonificacao() As Double
+        Friend MustOverride Function GetBonificacao() As Double
 
-        Public MustOverride Sub AumentarSalario()
+        Friend MustOverride Sub AumentarSalario()
 
 #End Region
 
