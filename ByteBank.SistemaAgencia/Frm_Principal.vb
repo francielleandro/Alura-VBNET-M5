@@ -26,4 +26,10 @@
     Private Sub JanelasCascataToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles JanelasCascataToolStripMenuItem.Click
         Me.LayoutMdi(MdiLayout.Cascade)
     End Sub
+
+    Private Sub Video02ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles Video02ToolStripMenuItem.Click
+        Dim F As New Frm_Login
+        F.MdiParent = Me
+        F.Show()
+    End Sub
 End Class
