@@ -25,14 +25,16 @@ Partial Class Frm_CartaoCredito
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Frm_CartaoCredito))
         Me.Lbl_ContaCorrenteCriada = New System.Windows.Forms.Label()
         Me.Grp_ContaCorrente = New System.Windows.Forms.GroupBox()
+        Me.DTP_Vencimento = New System.Windows.Forms.DateTimePicker()
+        Me.Lbl_Vencimento = New System.Windows.Forms.Label()
         Me.Btn_Criar = New System.Windows.Forms.Button()
         Me.Txt_ContaCorrente = New System.Windows.Forms.TextBox()
         Me.Txt_Agencia = New System.Windows.Forms.TextBox()
         Me.Lbl_ContaCorrente = New System.Windows.Forms.Label()
         Me.Lbl_Agencia = New System.Windows.Forms.Label()
         Me.Pic_Logo = New System.Windows.Forms.PictureBox()
-        Me.Lbl_Vencimento = New System.Windows.Forms.Label()
-        Me.DTP_Vencimento = New System.Windows.Forms.DateTimePicker()
+        Me.Lbl_Mensagem = New System.Windows.Forms.Label()
+        Me.Lbl_Msg2 = New System.Windows.Forms.Label()
         Me.Grp_ContaCorrente.SuspendLayout()
         CType(Me.Pic_Logo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -61,6 +63,22 @@ Partial Class Frm_CartaoCredito
         Me.Grp_ContaCorrente.TabIndex = 4
         Me.Grp_ContaCorrente.TabStop = False
         Me.Grp_ContaCorrente.Text = "GroupBox1"
+        '
+        'DTP_Vencimento
+        '
+        Me.DTP_Vencimento.Location = New System.Drawing.Point(10, 139)
+        Me.DTP_Vencimento.Name = "DTP_Vencimento"
+        Me.DTP_Vencimento.Size = New System.Drawing.Size(279, 20)
+        Me.DTP_Vencimento.TabIndex = 6
+        '
+        'Lbl_Vencimento
+        '
+        Me.Lbl_Vencimento.AutoSize = True
+        Me.Lbl_Vencimento.Location = New System.Drawing.Point(7, 120)
+        Me.Lbl_Vencimento.Name = "Lbl_Vencimento"
+        Me.Lbl_Vencimento.Size = New System.Drawing.Size(39, 13)
+        Me.Lbl_Vencimento.TabIndex = 5
+        Me.Lbl_Vencimento.Text = "Label1"
         '
         'Btn_Criar
         '
@@ -112,27 +130,31 @@ Partial Class Frm_CartaoCredito
         Me.Pic_Logo.TabIndex = 3
         Me.Pic_Logo.TabStop = False
         '
-        'Lbl_Vencimento
+        'Lbl_Mensagem
         '
-        Me.Lbl_Vencimento.AutoSize = True
-        Me.Lbl_Vencimento.Location = New System.Drawing.Point(7, 120)
-        Me.Lbl_Vencimento.Name = "Lbl_Vencimento"
-        Me.Lbl_Vencimento.Size = New System.Drawing.Size(39, 13)
-        Me.Lbl_Vencimento.TabIndex = 5
-        Me.Lbl_Vencimento.Text = "Label1"
+        Me.Lbl_Mensagem.AutoSize = True
+        Me.Lbl_Mensagem.Location = New System.Drawing.Point(169, 255)
+        Me.Lbl_Mensagem.Name = "Lbl_Mensagem"
+        Me.Lbl_Mensagem.Size = New System.Drawing.Size(39, 13)
+        Me.Lbl_Mensagem.TabIndex = 6
+        Me.Lbl_Mensagem.Text = "Label1"
         '
-        'DTP_Vencimento
+        'Lbl_Msg2
         '
-        Me.DTP_Vencimento.Location = New System.Drawing.Point(10, 139)
-        Me.DTP_Vencimento.Name = "DTP_Vencimento"
-        Me.DTP_Vencimento.Size = New System.Drawing.Size(279, 20)
-        Me.DTP_Vencimento.TabIndex = 6
+        Me.Lbl_Msg2.AutoSize = True
+        Me.Lbl_Msg2.Location = New System.Drawing.Point(169, 280)
+        Me.Lbl_Msg2.Name = "Lbl_Msg2"
+        Me.Lbl_Msg2.Size = New System.Drawing.Size(39, 13)
+        Me.Lbl_Msg2.TabIndex = 7
+        Me.Lbl_Msg2.Text = "Label1"
         '
         'Frm_CartaoCredito
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(748, 332)
+        Me.Controls.Add(Me.Lbl_Msg2)
+        Me.Controls.Add(Me.Lbl_Mensagem)
         Me.Controls.Add(Me.Lbl_ContaCorrenteCriada)
         Me.Controls.Add(Me.Grp_ContaCorrente)
         Me.Controls.Add(Me.Pic_Logo)
@@ -156,4 +178,6 @@ Partial Class Frm_CartaoCredito
     Friend WithEvents Pic_Logo As PictureBox
     Friend WithEvents DTP_Vencimento As DateTimePicker
     Friend WithEvents Lbl_Vencimento As Label
+    Friend WithEvents Lbl_Mensagem As Label
+    Friend WithEvents Lbl_Msg2 As Label
 End Class
