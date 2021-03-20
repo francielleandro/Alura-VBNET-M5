@@ -158,6 +158,7 @@ Partial Class Frm_CartaoCredito
         Me.Controls.Add(Me.Lbl_ContaCorrenteCriada)
         Me.Controls.Add(Me.Grp_ContaCorrente)
         Me.Controls.Add(Me.Pic_Logo)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Frm_CartaoCredito"
         Me.Text = "Frm_CartaoCredito"
         Me.Grp_ContaCorrente.ResumeLayout(False)
