@@ -1,6 +1,6 @@
 ﻿Imports ByteBank.Bibliotecas.Classes.Clientes
 
-Public Class Frm_Secundario
+Public Class Frm_CartaoCredito
     Public Sub New()
 
         ' This call is required by the designer.
@@ -8,7 +8,7 @@ Public Class Frm_Secundario
 
         ' Add any initialization after the InitializeComponent() call.
 
-        Me.Text = "Formulário Secundario"
+        Me.Text = "Vencimento Cartão de Crédito"
 
         Grp_ContaCorrente.Text = "Conta Corrente"
 
@@ -20,6 +20,8 @@ Public Class Frm_Secundario
 
         Btn_Criar.Text = "Criar"
 
+        Lbl_Vencimento.Text = "Vencimento"
+
     End Sub
 
     Private Sub Btn_Criar_Click(sender As Object, e As EventArgs) Handles Btn_Criar.Click
@@ -28,8 +30,10 @@ Public Class Frm_Secundario
 
         Dim Conta As ContaCorrente = New ContaCorrente(vAgencia, vContaCorrente)
 
+        Dim vDataVencimento As DateTime = DTP_Vencimento.Value
 
         Lbl_ContaCorrenteCriada.Text = "Agencia:" + vAgencia.ToString +
-            " - Conta: " + vContaCorrente.ToString
+            " - Conta: " + vContaCorrente.ToString + " Data do vencimento é " + vDataVencimento.ToString
+
     End Sub
 End Class

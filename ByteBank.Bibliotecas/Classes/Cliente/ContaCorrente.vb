@@ -1,6 +1,8 @@
 ﻿
 Namespace Classes.Clientes
-
+    ''' <summary>
+    ''' Esta classe representa a conta corrente de um cliente
+    ''' </summary>
     Public Class ContaCorrente
 
 #Region "PROPRIEDADES"
@@ -21,7 +23,7 @@ Namespace Classes.Clientes
 
         Public Property titular As Cliente
 
-        Public ReadOnly Property numero As Integer
+        Public ReadOnly Property numeroConta As Integer
 
         Private m_NumeroSaquesErrados As Integer
         Public Property NumeroSaquesErrados As Integer
@@ -63,7 +65,11 @@ Namespace Classes.Clientes
 #End Region
 
 #Region "CONSTRUTORES"
-
+        ''' <summary>
+        ''' Este construtor inicia uma nova classe conta corrente, Devemos passar como parameto o número da agencia e conta
+        ''' </summary>
+        ''' <param name="CodigoAgencia">O código da agencia não pode ser menor que zero</param>
+        ''' <param name="NumeroConta">Representa o número da conta <<see cref="numeroConta"/></param>
         Public Sub New(CodigoAgencia As Integer, NumeroConta As Integer)
 
             If (CodigoAgencia <= 0) Then
@@ -85,7 +91,7 @@ Namespace Classes.Clientes
             End If
 
             agencia = CodigoAgencia
-            numero = NumeroConta
+            Me.numeroConta = NumeroConta
             m_TotalDeContasCriadas += 1
 
             m_TaxaOperacao = 30 / m_TotalDeContasCriadas
