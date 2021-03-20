@@ -1,4 +1,5 @@
 ﻿Imports ByteBank.Bibliotecas.Classes.Clientes
+Imports Humanizer
 
 Public Class Frm_CartaoCredito
     Public Sub New()
@@ -47,22 +48,8 @@ Public Class Frm_CartaoCredito
 
         Lbl_Mensagem.Text = "Data de hoje é " + Mid(vDataHoje.ToString, 1, 10)
 
-        Lbl_Msg2.Text = getIntervaloTempo(vTempoVencimento)
+        Lbl_Msg2.Text = TimeSpanHumanizeExtensions.Humanize(vTempoVencimento)
 
     End Sub
-
-    Function getIntervaloTempo(vTempoVencimento As TimeSpan) As String
-        Dim vMeses As Integer = vTempoVencimento.Days / 30
-
-        If vTempoVencimento.Days > 30 Then
-            If vMeses > 1 Then
-                Return "O vencimento será em " + vMeses.ToString + " meses"
-            Else
-                Return "O vencimento será em " + vMeses.ToString + " mes"
-            End If
-        Else
-            Return "O vencimento será em " + vTempoVencimento.Days.ToString + " dias"
-        End If
-    End Function
 
 End Class
